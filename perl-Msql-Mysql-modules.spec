@@ -15,8 +15,6 @@ BuildRequires:	perl-DBI >= 1.08
 BuildRequires:	perl-Data-ShowTable
 BuildRequires:	mysql-devel >= 3.23
 BuildRequires:	zlib-devel
-%requires_eq	perl
-Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
