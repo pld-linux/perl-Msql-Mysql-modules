@@ -5,7 +5,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Msql-Mysql-modules perl module
-Summary(pl):	Modu³ perla Msql-Mysql-modules
+Summary(pl):	Modu³ Perla Msql-Mysql-modules
 Name:		perl-Msql-Mysql-modules
 Version:	1.2219
 Release:	7
