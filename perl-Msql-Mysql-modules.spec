@@ -3,11 +3,11 @@ Summary:	Msql-Mysql-modules perl module
 Summary(pl):	Modu³ perla Msql-Mysql-modules
 Name:		perl-Msql-Mysql-modules
 Version:	1.2219
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DBD/Msql-Mysql-modules-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-18
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-DBI >= 1.08
 BuildRequires:	perl-Data-ShowTable
@@ -29,6 +29,7 @@ MySQL i nie zawiera sterowników dla baz danych mSQL.
 
 %build
 %{__perl} Makefile.PL \
+	INSTALLDIRS=vendor  \
 	--nomsql-install \
 	--noprompt
 
@@ -46,12 +47,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README
 %attr(755,root,root) %{_bindir}/dbimon
-%{perl_sitearch}/DBD/mysql.pm
-%{perl_sitearch}/Mysql.pm
-%{perl_sitearch}/Mysql
-%dir %{perl_sitearch}/auto/DBD/mysql
-%{perl_sitearch}/auto/DBD/mysql/mysql.bs
-%attr(755,root,root) %{perl_sitearch}/auto/DBD/mysql/mysql.so
+%{perl_vendorarch}/DBD/mysql.pm
+%{perl_vendorarch}/Mysql.pm
+%{perl_vendorarch}/Mysql
+%dir %{perl_vendorarch}/auto/DBD/mysql
+%{perl_vendorarch}/auto/DBD/mysql/mysql.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/DBD/mysql/mysql.so
 %{_mandir}/man1/*
 %{_mandir}/man3/DBD*
 %{_mandir}/man3/Mysql*
