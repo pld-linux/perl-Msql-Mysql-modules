@@ -3,7 +3,7 @@ Summary:	Msql-Mysql-modules perl module
 Summary(pl):	Modu³ perla Msql-Mysql-modules
 Name:		perl-Msql-Mysql-modules
 Version:	1.2216
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -49,10 +49,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/dbimon
-%{perl_sitearch}/Bundle/DBD/mysql.pm
 %{perl_sitearch}/DBD/mysql.pm
 %{perl_sitearch}/Mysql.pm
 %{perl_sitearch}/Mysql
 %{perl_sitearch}/auto/DBD/mysql/mysql.bs
 %attr(755,root,root) %{perl_sitearch}/auto/DBD/mysql/mysql.so
-%{_mandir}/man[13]/*
+%{_mandir}/man1/*
+%{_mandir}/man3/DBD*
+%{_mandir}/man3/Mysql*
