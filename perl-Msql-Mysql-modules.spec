@@ -3,7 +3,7 @@ Summary:	Msql-Mysql-modules perl module
 Summary(pl):	Modu³ perla Msql-Mysql-modules
 Name:		perl-Msql-Mysql-modules
 Version:	1.2210
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
