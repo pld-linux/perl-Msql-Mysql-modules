@@ -3,7 +3,7 @@ Summary:	Msql-Mysql-modules perl module
 Summary(pl):	Modu³ perla Msql-Mysql-modules
 Name:		perl-Msql-Mysql-modules
 Version:	1.2219
-Release:	3
+Release:	4
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DBD/Msql-Mysql-modules-%{version}.tar.gz
