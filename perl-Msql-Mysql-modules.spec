@@ -14,7 +14,8 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DBD/Msql-Mysql-modules-%{version}.tar.gz
 # Source0-md5:	ad3dec1881d4c4ff9a353f33ff434b5f
-BuildRequires:	mysql-devel >= 3.23
+Patch0:		%{name}-shutdown.patch
+BuildRequires:	mysql-devel >= 4.1.0
 BuildRequires:	perl-DBI >= 1.08
 BuildRequires:	perl-Data-ShowTable
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -33,6 +34,7 @@ MySQL i nie zawiera sterowników dla baz danych mSQL.
 
 %prep
 %setup -q -n Msql-Mysql-modules-%{version}
+%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \
