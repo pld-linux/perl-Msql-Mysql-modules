@@ -28,7 +28,7 @@ MySQL i nie zawiera sterowników dla baz danych mSQL.
 %setup -q -n Msql-Mysql-modules-%{version}
 
 %build
-perl Makefile.PL \
+%{__perl} Makefile.PL \
 	--nomsql-install \
 	--noprompt
 
