@@ -1,10 +1,16 @@
+#
+# Conditional build:
+%bcond_with	tests	# perform "make test"
+			# require server access
+#
 %include	/usr/lib/rpm/macros.perl
 Summary:	Msql-Mysql-modules perl module
 Summary(pl):	Modu³ perla Msql-Mysql-modules
 Name:		perl-Msql-Mysql-modules
 Version:	1.2219
 Release:	6
-License:	GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DBD/Msql-Mysql-modules-%{version}.tar.gz
 # Source0-md5:	ad3dec1881d4c4ff9a353f33ff434b5f
@@ -34,9 +40,10 @@ MySQL i nie zawiera sterowników dla baz danych mSQL.
 	--mysql-libdir=%{_libdir} \
 	--nomsql-install \
 	--noprompt
-
 %{__make} \
 	OPTIMIZE="%{rpmcflags}"
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
