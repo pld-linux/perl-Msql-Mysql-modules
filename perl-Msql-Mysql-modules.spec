@@ -6,7 +6,7 @@ Version:	1.2219
 Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/DBD/Msql-Mysql-modules-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/DBD/Msql-Mysql-modules-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-DBI >= 1.08
