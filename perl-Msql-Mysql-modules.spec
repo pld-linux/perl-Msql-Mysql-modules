@@ -8,7 +8,7 @@ License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DBD/Msql-Mysql-modules-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl >= 5.6
+BuildRequires:	perl-devel >= 5.6
 BuildRequires:	perl-DBI >= 1.08
 BuildRequires:	perl-Data-ShowTable
 BuildRequires:	mysql-devel >= 3.23
