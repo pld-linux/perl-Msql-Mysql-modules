@@ -3,7 +3,7 @@ Summary:	Msql-Mysql-modules perl module
 Summary(pl):	Modu³ perla Msql-Mysql-modules
 Name:		perl-Msql-Mysql-modules
 Version:	1.2215
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -13,7 +13,7 @@ BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-DBI >= 1.08
 BuildRequires:	perl-Data-ShowTable
-BuildRequires:	mysql-devel
+BuildRequires:	mysql-devel >= 3.23
 BuildRequires:	zlib-devel
 %requires_eq	perl
 Requires:	%{perl_sitearch}
