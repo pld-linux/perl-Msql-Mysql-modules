@@ -16,7 +16,7 @@ BuildRequires:	mysql-devel
 BuildRequires:	zlib-devel
 %requires_eq	perl
 Requires:	%{perl_sitearch}
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Msql-Mysql-modules package. 
