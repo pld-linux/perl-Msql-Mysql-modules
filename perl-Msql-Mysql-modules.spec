@@ -7,7 +7,7 @@ Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/DBD/Msql-Mysql-modules-%{version}.tar.gz
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/DBD/Msql-Mysql-modules-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRequires:	perl >= 5.005_03-14
 BuildRequires:	perl-DBI >= 1.08
@@ -19,14 +19,12 @@ Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Msql-Mysql-modules package. 
-This package is configured for use with MySQL only and doesn't contain 
-drivers for mSQL databases.
+Msql-Mysql-modules package. This package is configured for use with
+MySQL only and doesn't contain drivers for mSQL databases.
 
 %description -l pl
-Pakiet Msql-Mysql-modules. 
-Ten pakiet jest skonfigurowany do u¿ytku z MySQL i nie zawiera sterowników
-dla baz danych mSQL.
+Pakiet Msql-Mysql-modules. Ten pakiet jest skonfigurowany do u¿ytku z
+MySQL i nie zawiera sterowników dla baz danych mSQL.
 
 %prep
 %setup -q -n Msql-Mysql-modules-%{version}
