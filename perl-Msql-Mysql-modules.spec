@@ -3,16 +3,16 @@ Summary:	Msql-Mysql-modules perl module
 Summary(pl):	Modu³ perla Msql-Mysql-modules
 Name:		perl-Msql-Mysql-modules
 Version:	1.2219
-Release:	5
+Release:	6
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DBD/Msql-Mysql-modules-%{version}.tar.gz
 # Source0-md5:	ad3dec1881d4c4ff9a353f33ff434b5f
-BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl-devel >= 5.6
+BuildRequires:	mysql-devel >= 3.23
 BuildRequires:	perl-DBI >= 1.08
 BuildRequires:	perl-Data-ShowTable
-BuildRequires:	mysql-devel >= 3.23
+BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	zlib-devel
 Obsoletes:	perl-DBD-mysql
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,16 +30,19 @@ MySQL i nie zawiera sterowników dla baz danych mSQL.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor  \
+	INSTALLDIRS=vendor \
+	--mysql-libdir=%{_libdir} \
 	--nomsql-install \
 	--noprompt
 
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
