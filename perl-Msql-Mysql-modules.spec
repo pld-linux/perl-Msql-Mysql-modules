@@ -2,11 +2,13 @@
 Summary:	Msql-Mysql-modules perl module
 Summary(pl):	Modu³ perla Msql-Mysql-modules
 Name:		perl-Msql-Mysql-modules
-Version:	1.2210
-Release:	2
+Version:	1.2215
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
+Vendor: PLD
+Distribution: PLD
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/DBD/Msql-Mysql-modules-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRequires:	perl >= 5.005_03-14
@@ -44,7 +46,7 @@ strip --strip-unneeded $RPM_BUILD_ROOT%{perl_sitearch}/auto/DBD/mysql/*.so
 
 (
   cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/Msql-Mysql-modules
-  sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
+  sed -e "s#$RPM_BUILD_ROOT##" .packlist | sort | uniq >.packlist.new
   mv .packlist.new .packlist
 )
 
