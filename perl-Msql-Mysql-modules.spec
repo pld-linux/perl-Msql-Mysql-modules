@@ -5,7 +5,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Msql-Mysql-modules perl module
-Summary(pl):	Modu≥ Perla Msql-Mysql-modules
+Summary(pl.UTF-8):   Modu≈Ç Perla Msql-Mysql-modules
 Name:		perl-Msql-Mysql-modules
 Version:	1.2219
 Release:	10
@@ -28,9 +28,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Msql-Mysql-modules package. This package is configured for use with
 MySQL only and doesn't contain drivers for mSQL databases.
 
-%description -l pl
-Pakiet Msql-Mysql-modules. Ten pakiet jest skonfigurowany do uøytku z
-MySQL i nie zawiera sterownikÛw dla baz danych mSQL.
+%description -l pl.UTF-8
+Pakiet Msql-Mysql-modules. Ten pakiet jest skonfigurowany do u≈ºytku z
+MySQL i nie zawiera sterownik√≥w dla baz danych mSQL.
 
 %prep
 %setup -q -n Msql-Mysql-modules-%{version}
