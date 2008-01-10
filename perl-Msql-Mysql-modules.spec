@@ -43,6 +43,7 @@ MySQL i nie zawiera sterowników dla baz danych mSQL.
 	--nomsql-install \
 	--noprompt
 %{__make} \
+	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
 
 %{?with_tests:%{__make} test}
