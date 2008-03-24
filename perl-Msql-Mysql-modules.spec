@@ -15,6 +15,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DBD/Msql-Mysql-modules-%{version}.tar.gz
 # Source0-md5:	ad3dec1881d4c4ff9a353f33ff434b5f
 Patch0:		%{name}-shutdown.patch
+URL:		http://search.cpan.org/dist/Msql-Mysql-modules/
 BuildRequires:	mysql-devel >= 4.1.0
 BuildRequires:	perl-DBI >= 1.08
 BuildRequires:	perl-Data-ShowTable
